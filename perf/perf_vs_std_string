@@ -1,0 +1,123 @@
+Starting performance test "flat_iteration" ...
+flat_iteration, rope:         3.84521e-05s
+flat_iteration, std::string:  7.82311e-10s (rope is 49152x slower)
+
+Starting performance test "tree_iteration" ...
+tree_iteration, rope:         0.000180664s
+tree_iteration, std::string:  7.82311e-10s (rope is 230936x slower)
+
+Starting performance test "deep_substring_iteration" ...
+deep_substring_iteration, rope:         0.000112305s
+deep_substring_iteration, std::string:  7.82311e-10s (rope is 143555x slower)
+
+Starting performance test "1_char_c_str_append" ...
+1_char_c_str_append, rope:         0.03625s
+1_char_c_str_append, std::string:  0.00289062s (rope is 12.5405x slower)
+
+Starting performance test "2_char_c_str_append" ...
+2_char_c_str_append, rope:         0.0278125s
+2_char_c_str_append, std::string:  0.00679687s (rope is 4.09195x slower)
+
+Starting performance test "4_char_c_str_append" ...
+4_char_c_str_append, rope:         0.0139063s
+4_char_c_str_append, std::string:  0.00328125s (rope is 4.2381x slower)
+
+Starting performance test "8_char_c_str_append" ...
+8_char_c_str_append, rope:         0.00828125s
+8_char_c_str_append, std::string:  0.00171875s (rope is 4.81818x slower)
+
+Starting performance test "16_char_c_str_append" ...
+16_char_c_str_append, rope:         0.00523438s
+16_char_c_str_append, std::string:  0.000849609s (rope is 6.16092x slower)
+
+Starting performance test "32_char_c_str_append" ...
+32_char_c_str_append, rope:         0.00359375s
+32_char_c_str_append, std::string:  0.000429688s (rope is 8.36364x slower)
+
+Starting performance test "64_char_c_str_append" ...
+64_char_c_str_append, rope:         0.00257813s
+64_char_c_str_append, std::string:  0.000239258s (rope is 10.7755x slower)
+
+Starting performance test "128_char_c_str_append" ...
+128_char_c_str_append, rope:         0.00226562s
+128_char_c_str_append, std::string:  0.000153809s (rope is 14.7302x slower)
+
+Starting performance test "256_char_c_str_append" ...
+256_char_c_str_append, rope:         0.00177734s
+256_char_c_str_append, std::string:  0.000126953s (rope is 14x slower)
+
+Starting performance test "512_char_c_str_append" ...
+512_char_c_str_append, rope:         0.000957031s
+512_char_c_str_append, std::string:  0.000101318s (rope is 9.44578x slower)
+
+Starting performance test "1024_char_c_str_append" ...
+1024_char_c_str_append, rope:         0.000615234s
+1024_char_c_str_append, std::string:  8.66699e-05s (rope is 7.09859x slower)
+
+Starting performance test "1_char_append" ...
+1_char_append, rope:         0.26s
+1_char_append, std::string:  0.00984375s (rope is 26.4127x slower)
+
+Starting performance test "2_char_append" ...
+2_char_append, rope:         0.125s
+2_char_append, std::string:  0.00796875s (rope is 15.6863x slower)
+
+Starting performance test "4_char_append" ...
+4_char_append, rope:         0.0625s
+4_char_append, std::string:  0.00382812s (rope is 16.3265x slower)
+
+Starting performance test "8_char_append" ...
+8_char_append, rope:         0.029375s
+8_char_append, std::string:  0.00199219s (rope is 14.7451x slower)
+
+Starting performance test "16_char_append" ...
+16_char_append, rope:         0.0145313s
+16_char_append, std::string:  0.00101563s (rope is 14.3077x slower)
+
+Starting performance test "32_char_append" ...
+32_char_append, rope:         0.00710938s
+32_char_append, std::string:  0.000498047s (rope is 14.2745x slower)
+
+Starting performance test "64_char_append" ...
+64_char_append, rope:         0.00355469s
+64_char_append, std::string:  0.00027832s (rope is 12.7719x slower)
+
+Starting performance test "128_char_append" ...
+128_char_append, rope:         0.00177734s
+128_char_append, std::string:  0.000163574s (rope is 10.8657x slower)
+
+Starting performance test "256_char_append" ...
+256_char_append, rope:         0.000869141s
+256_char_append, std::string:  0.00012207s (rope is 7.12x slower)
+
+Starting performance test "512_char_append" ...
+512_char_append, rope:         0.00043457s
+512_char_append, std::string:  0.000100098s (rope is 4.34146x slower)
+
+Starting performance test "1024_char_append" ...
+1024_char_append, rope:         0.000205078s
+1024_char_append, std::string:  8.78906e-05s (rope is 2.33333x slower)
+
+Starting performance test "substring_creation" ...
+substring_creation, rope:         0.000898438s
+substring_creation, std::string:  0.0078125s (rope is 8.69565x faster)
+
+Starting performance test "c_str_insertion" ...
+c_str_insertion, rope:         2.52724e-07s
+c_str_insertion, std::string:  0.0215625s (rope is 85320.5x faster)
+
+Starting performance test "insertion" ...
+insertion, rope:         1.38283e-07s
+insertion, std::string:  0.0215625s (rope is 155930x faster)
+
+Starting performance test "erasure" ...
+erasure, rope:         6.25849e-09s
+erasure, std::string:  7.89762e-09s (rope is 1.2619x faster)
+
+Starting performance test "c_str_replacement" ...
+c_str_replacement, rope:         3.28064e-06s
+c_str_replacement, std::string:  0.0215625s (rope is 6572.65x faster)
+
+Starting performance test "replacement" ...
+replacement, rope:         3.20435e-06s
+replacement, std::string:  0.02125s (rope is 6631.62x faster)
