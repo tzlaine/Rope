@@ -286,7 +286,10 @@ namespace rope_detail {
     struct function :
         function_base
     {
-        function(const Functor& function, std::size_t size);
+        function(const Functor& function, std::size_t size) :
+            function_base(size, 0, function_, false),
+            m_rope_fn(size ? function : Functor())
+            {}
 
         virtual char get_char(std::size_t i) const
             { return m_rope_fn(i); }
@@ -388,15 +391,6 @@ namespace rope_detail {
             return new function<substring_reference>(substring_reference(this, i), size);
         }
     }
-
-    template <typename Functor>
-    function<Functor>::function(const Functor& function, std::size_t size) :
-        function_base(size,
-                      0,
-                      function_,
-                      boost::is_same<Functor, substring_reference>::value),
-        m_rope_fn(size ? function : Functor())
-    {}
 
     inline rope_node_ptr concatenate(rope_node_ptr lhs, rope_node_ptr rhs)
     {
