@@ -1,3 +1,4 @@
+// -*- C++ -*-
 #include <cstring>
 #include <ostream>
 
