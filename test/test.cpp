@@ -13,7 +13,7 @@
 
 
 // HACK! This must be kept in sync with the value in rope.cpp
-const std::size_t c_short_string_max = 256;
+const std::size_t c_short_string_max = 512;
 
 const rope reference_value_empty;
 const rope reference_value_test("test");
