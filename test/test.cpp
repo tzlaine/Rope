@@ -1,9 +1,9 @@
-//g++ test.cpp -o rope_test rope.cpp -m32 -I /usr/local/include/boost-1_44 -g -Wall -lboost_unit_test_framework && ./rope_test
-//g++ test.cpp -o rope_test rope.cpp -m32 -I /usr/local/include/boost-1_44 -g -Wall -lboost_unit_test_framework && valgrind --log-file=valgrind_run --num-callers=50 --error-limit=no --leak-check=full ./rope_test
+//g++ test.cpp -o rope_test -I /usr/local/include/boost-1_44 -g -Wall -lboost_unit_test_framework && ./rope_test
+//g++ test.cpp -o rope_test -I /usr/local/include/boost-1_44 -g -Wall -lboost_unit_test_framework && valgrind --log-file=valgrind_run --num-callers=50 --error-limit=no --leak-check=full ./rope_test
 
-//g++ test.cpp -o rope_test rope.cpp -m32 -I /usr/local/include/boost -DNDEBUG -g -Wall /usr/local/lib/libboost_unit_test_framework.a
+//g++ test.cpp -o rope_test -I /usr/local/include/boost -DNDEBUG -g -Wall /usr/local/lib/libboost_unit_test_framework.a
 
-#include "rope.h"
+#include "../rope.h"
 
 
 //#define BOOST_TEST_DYN_LINK

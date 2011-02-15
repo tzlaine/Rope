@@ -1,9 +1,9 @@
-//g++ test.cpp -o rope_perf rope.cpp -m32 -I /usr/local/include/boost-1_44 -g -Wall -lboost_unit_test_framework -ISTLport-5.2.1/stlport && ./rope_perf
-//g++ test.cpp -o rope_perf rope.cpp -m32 -I /usr/local/include/boost-1_44 -g -Wall -lboost_unit_test_framework -ISTLport-5.2.1/stlport && valgrind --log-file=valgrind_run --num-callers=50 --error-limit=no --leak-check=full ./rope_perf
+//g++ test.cpp -o rope_perf -I /usr/local/include/boost-1_44 -g -Wall -lboost_unit_test_framework -ISTLport-5.2.1/stlport && ./rope_perf
+//g++ test.cpp -o rope_perf -I /usr/local/include/boost-1_44 -g -Wall -lboost_unit_test_framework -ISTLport-5.2.1/stlport && valgrind --log-file=valgrind_run --num-callers=50 --error-limit=no --leak-check=full ./rope_perf
 
-//g++ perf.cpp -o rope_perf rope.cpp -I /usr/local/include/boost -DNDEBUG -O2 -g -Wall -lboost_unit_test_framework -I../STLport-5.2.1/stlport -L../STLport-5.2.1/build/lib/obj/gcc/so -lstlport
+//g++ perf.cpp -o rope_perf -I /usr/local/include/boost -DNDEBUG -O2 -g -Wall -lboost_unit_test_framework -I../STLport-5.2.1/stlport -L../STLport-5.2.1/build/lib/obj/gcc/so -lstlport
 
-#include "rope.h"
+#include "../rope.h"
 
 #include <boost/timer.hpp>
 
