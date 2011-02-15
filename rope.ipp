@@ -318,6 +318,45 @@ namespace rope_detail {
         std::size_t m_offset;
     };
 
+    template <>
+    struct function<substring_reference> :
+        function_base
+    {
+        function(const substring_reference& function, std::size_t size) :
+            function_base(size, 0, function_, true),
+            m_rope_fn(size ? function : substring_reference())
+            {}
+
+        virtual char get_char(std::size_t i) const
+            { return m_rope_fn(i); }
+
+        virtual void fill_buffer(const char*& buffer_first,
+                                 const char*& buffer_last,
+                                 char internal_buffer[],
+                                 std::size_t internal_buffer_size,
+                                 std::size_t offset) const
+            {
+                if (m_rope_fn.m_node && m_rope_fn.m_node->is_string()) {
+                    string_ptr str =
+                        boost::static_pointer_cast<string>(m_rope_fn.m_node);
+                    const char* data = str->m_str.data();
+                    buffer_first = data + m_rope_fn.m_offset + offset;
+                    buffer_last = data + m_rope_fn.m_offset + m_size;
+                } else {
+                    rope_node::fill_buffer(buffer_first,
+                                           buffer_last,
+                                           internal_buffer,
+                                           internal_buffer_size,
+                                           offset);
+                }
+            }
+
+        substring_reference m_rope_fn;
+
+    private:
+        function& operator=(const function& rhs); // = delete;
+    };
+
     inline rope_node_ptr string::append(const char* c_str, std::size_t c_str_size)
     {
         rope_node_ptr retval;
