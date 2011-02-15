@@ -885,7 +885,7 @@ TEST_STRING(replacement, REPLACE_INIT(), STRING_REPLACE());
         ratio = 1.0 / ratio;                                            \
     std::cout                                                           \
         << #x", std::string:  " << string_time << "s "                  \
-        << "(rope is " << ratio << "x " << (speedup ? "faster" : "slower") << ")\n" \
+        << "(rope is " << ratio << "x " << (speedup ? "faster" : "slower") << ")" \
         << std::endl;
 #endif
 
